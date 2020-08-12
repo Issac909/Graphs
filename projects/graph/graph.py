@@ -22,7 +22,6 @@ class Graph:
         edges = self.vertices[v1]
         edges.add(v2)
             
-
     def get_neighbors(self, vertex_id):
         """
         Get all neighbors (edges) of a vertex.
