@@ -31,7 +31,6 @@ def earliest_ancestor(ancestors, starting_node):
     path = list()
 
     while len(marked) > 0:
-        # Sorting s forces the smallest value on any particular traversed level to go last
         marked.sort()
         current = marked.pop()
 
