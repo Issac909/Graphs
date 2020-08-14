@@ -33,7 +33,7 @@ traversal_path = []
 
 visited =  {}
 reverse_path = [] 
-o = {"n" : "s", "e": "w", "s":"n", "w": "e" } 
+direction = {"n" : "s", "e": "w", "s":"n", "w": "e" } 
 
 visited[player.current_room.id] = player.current_room.get_exits()
 
@@ -51,7 +51,7 @@ while len(visited) > len(room_graph):
         d = visited[player.current_room.id][-1]
         visited[player.current_room.id].pop()
         traversal_path.append(d) 
-        reverse_path.append(o[d])
+        reverse_path.append(direction[d])
         player.travel(d)
 
 
